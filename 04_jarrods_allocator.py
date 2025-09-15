@@ -303,7 +303,7 @@ def implied_dif_returns_SLSQP(rtns, lev, allocation, worst, target_exputil, zero
 def find_implied_dif_expected_returns(returns_df, lev, exputil, allocation):
     rtns = returns_df.values
     # Use minimum norm SLSQP without worst-case constraint for implied returns
-    # The worst-case constraint is important for forward optimization but 
+    # The worst-case constraint is important for forward optimization but might be
     # overly restrictive for the inverse problem
     output = implied_dif_returns_SLSQP(rtns, lev, allocation, worst=None, target_exputil=exputil, zero_sum_type=None)
     
